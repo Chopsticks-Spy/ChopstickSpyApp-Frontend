@@ -1,10 +1,12 @@
 import React from 'react'
+import Timer from '../Components/Timer'
 
 const Ingame = () => {
   return (
-    <div className ="time-hp">
-        <div className = "time">Time</div> <div className ="HP"></div>
-        <div className = "timeshow"></div>
+    <div>
+      <div className="time-box">
+        <Timer/>
+      </div>
     </div>
   )
 }
