@@ -10,13 +10,13 @@ function App() {
       <div>
          <div className="App">
          <div className="main">
-         <h1 className = "appTitle">Chopstick Spy</h1>
+         <h1 className = "appTitle">CHOPSTICK SPY</h1>
 
          </div>
          <Routes>
            <Route path="/" element={<Home/>}/>
-           <Route path="/Ingame" element={<Ingame/>}/>
-           <Route path="/Scoreboard" element={<Scoreboard/>}/>
+           <Route path="/ingame" element={<Ingame/>}/>
+           <Route path="/scoreboard" element={<Scoreboard/>}/>
          </Routes> 
          </div>
       </div>

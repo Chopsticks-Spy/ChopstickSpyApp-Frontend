@@ -56,7 +56,6 @@ body {
   color: rgb(255, 0, 0);
   font-size: 60px;
   font-family: monospace;
-  
 }
 
 .timer-count-box {
@@ -64,6 +63,10 @@ body {
   background-color: rgb(35, 4, 4);
   text-align: center;
   border-radius: 75px;
+  width: 400px;
+  margin: auto;
+  border: 5px solid red;
+  box-shadow: 0 0px 50px 0px rgb(0, 0, 0);
 }
 
 .box-top {
@@ -78,9 +81,59 @@ body {
 }
 
 .time-box{
-  width: 400px;
+  width: 500px;
   margin: auto;
 }
 
-#game-stat-box {
+.timer-btn-div{
+  text-align: center;
+  margin: 20px;
+}
+
+.timer-btn{
+  margin: 0px 15px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 22px;
+  border-radius: 50px;
+  background-color: #311010;
+  color: white;
+  border: 5px solid red;
+  box-shadow: 0 0px 50px 0px rgb(0, 0, 0);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.timer-btn:hover{
+  box-shadow: 0 0px 25px 0px rgb(255, 0, 0);
+}
+
+.score-card{
+  color:  white;
+  font-size: 36px;
+  display: flex;
+  background-color: #311010;
+  width: 1000px;
+  height: 100px;
+  margin: 20px auto;
+  border: 5px solid red;
+  box-shadow: 0 0px 50px 0px rgb(0, 0, 0);
+  font-family: monospace;
+}
+
+.score-card-rank{
+  margin: 0 0 0 50px;
+  align-self: center;
+  font-size: 70px;
+}
+
+.score-card-name{
+  margin: 0 0 0 70px;
+  align-self: center;
+  width: 400px;
+}
+
+.score-card-score{
+  margin: 0 0 0 200px;
+  align-self: center;
 }

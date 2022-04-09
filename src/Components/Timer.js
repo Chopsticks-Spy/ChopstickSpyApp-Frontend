@@ -31,10 +31,10 @@ const Timer = () => {
           <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
         </div>
       </div>
-      <div className="buttons">
-        <button onClick={() => setRunning(true)}>Start</button>
-        <button onClick={() => setRunning(false)}>Stop</button>
-        <button onClick={() => setTime(0)}>Reset</button>       
+      <div className="timer-btn-div">
+        <button className='timer-btn' onClick={() => setRunning(true)}>START</button>
+        <button className='timer-btn' onClick={() => setRunning(false)}>STOP</button>
+        <button className='timer-btn' onClick={() => {setRunning(false);setTime(0)}}>RESET</button>       
       </div>
     </div>
   )
