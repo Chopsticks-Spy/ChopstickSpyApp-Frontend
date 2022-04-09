@@ -2,11 +2,14 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div className="title">
-        <h1>Chopstick Spy</h1>
+    // <body>
+      <div className="App">
+        <div className="main">
+          <h1 className = "appTitle">Chopstick Spy</h1>
+          <button className = "start-btn">START</button>
+        </div>
       </div>
-    </div>
+    // </body>
   );
 }
 
