@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import hp0 from '../image/HPbar/hp0.png'
+import hp1 from '../image/HPbar/hp1.png'
+import hp2 from '../image/HPbar/hp2.png'
+import hp3 from '../image/HPbar/hp3.png'
+import hp4 from '../image/HPbar/hp4.png'
+import hp5 from '../image/HPbar/hp5.png'
+
 
 const Timer = () => {
   
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
+  const HealthBar = [hp0,hp1,hp2,hp3,hp4,hp5]
 
   useEffect(() => {
     let interval;
@@ -21,10 +29,13 @@ const Timer = () => {
   return (
     <div id='game-stat-box'>
       <div className='box-top'>
-        <h1 className='timer-text'>Timer</h1>
+        {/* <h1 className='timer-text'>Timer</h1> */}
         <div className='hp'>
-          <h1 className='hp-text'>HP</h1>
-          <img src='./src/image/HPbar/hp5.png' alt='HP-5'/>
+          <h1 className='hp-text'>Health Remaining</h1>
+          <h1 className='hp-text' style={{
+            "fontSize" : "50px"
+          }}>5/5</h1>
+          <img className='health-bar' src={HealthBar[5]} alt='HP-5'/>
         </div>
       </div>
       <div className="timer-count-box">

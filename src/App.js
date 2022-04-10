@@ -11,7 +11,6 @@ function App() {
          <div className="App">
          <div className="main">
          <h1 className = "appTitle">CHOPSTICK SPY</h1>
-
          </div>
          <Routes>
            <Route path="/" element={<Home/>}/>
