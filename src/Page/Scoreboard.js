@@ -1,21 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HomeBtn from '../Components/HomeBtn'
 import PlayerScore from '../Components/PlayerScore'
+import { getScore } from '../service/Scoreboard'
 
 const Scoreboard = () => {
+
+  const [scoreboard,setScoreboard] = useState([])
+
+  useEffect(()=>{
+    getScore().then((response)=>{
+      setScoreboard(response.data)
+      console.log(scoreboard)
+    })
+  })
+
   return (
     <div className='scoreboard-main'>
+      <PlayerScore ranking="-" name="Name" hp="HP" time="Time Used" /> 
       <div className='scoreboard-list'>
-        <PlayerScore ranking="1" name="aaaaaaa" score="5200" />
-        <PlayerScore ranking="2" name="ajgjkajgkjkwg" score="4000" />
-        <PlayerScore ranking="3" name="skdjiwjjjfjjf" score="3000" />
-        <PlayerScore ranking="4" name="aaaaaww" score="2000" />
-        <PlayerScore ranking="4" name="aaaaaww" score="2000" />
-        <PlayerScore ranking="4" name="aaaaaww" score="2000" />
-        <PlayerScore ranking="4" name="aaaaaww" score="2000" />
-        <PlayerScore ranking="4" name="aaaaaww" score="2000" />
+        {
+          scoreboard.map((sb) =>{
+            <PlayerScore ranking="1" name={sb.name} hp={sb.hp} time={(sb.time)} />
+          })
+        }
+        
       </div>
-      <HomeBtn/>
+      <HomeBtn className="home-btn"/>
     </div>
   )
 }

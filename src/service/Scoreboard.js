@@ -16,7 +16,11 @@ async function postScore(n,larr,h,t){
     return result
 }
 
-(async()=>{
-    const x = await postScore('KKK',[1,1,1,0,0,0],5,11.11)
-    console.log(x)
-})()
+// getScore().then((data)=>{
+//     console.log(data.data)
+// })
+
+module.exports = {
+    getScore,
+    postScore
+}
