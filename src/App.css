@@ -76,6 +76,13 @@ body {
   text-decoration: none;
 }
 
+.status-text {
+  color:white;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 100px;
+}
+
 .timeshow{
   background-color: #311010;
   box-shadow: 0 0px 50px 0px rgb(255, 41, 41);
@@ -229,3 +236,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff0000; 
 }
+

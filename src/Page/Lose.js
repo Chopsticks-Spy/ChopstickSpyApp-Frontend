@@ -2,7 +2,7 @@ import React from 'react'
 
 const Lose = () => {
   return (
-    <div>You Lose</div>
+    <div className="status-text">You Lose</div>
   )
 }
 

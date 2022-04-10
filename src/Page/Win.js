@@ -2,7 +2,7 @@ import React from 'react'
 
 const Win = () => {
   return (
-    <div style={{"color":"white"}}>You Win</div>
+    <div className="status-text">You Win</div>
   )
 }
 
