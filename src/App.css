@@ -47,6 +47,10 @@ body {
   text-decoration: none;
 }
 
+.start{
+  margin-top: 250px;
+}
+
 .scorebtn {
   color: rgb(255, 255, 255);
   padding: 20px 80px;
@@ -188,6 +192,12 @@ body {
 .health-bar{
   width: 209px;
   height: 115px;
+}
+
+.countdown-main{
+  width: 250px;
+  text-align: center;
+  margin: 230px auto;
 }
 
 /* .game-stat-box{

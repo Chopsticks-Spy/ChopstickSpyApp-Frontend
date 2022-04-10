@@ -5,12 +5,14 @@ import hp2 from '../image/HPbar/hp2.png'
 import hp3 from '../image/HPbar/hp3.png'
 import hp4 from '../image/HPbar/hp4.png'
 import hp5 from '../image/HPbar/hp5.png'
+import { getStatus } from '../service/Status'
 
 
 const Timer = () => {
   
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(true);
+  const [health,setHealth] = useState(5)
   const HealthBar = [hp0,hp1,hp2,hp3,hp4,hp5]
 
   useEffect(() => {
@@ -25,6 +27,13 @@ const Timer = () => {
     return () => clearInterval(interval);
     }
   , [running]);
+
+  useEffect(()=>{
+    getStatus().then((data)=>{
+      setHealth(data.hp)
+      console.log(data.hp)
+    })
+  })
   
   return (
     <div id='game-stat-box'>
@@ -34,8 +43,8 @@ const Timer = () => {
           <h1 className='hp-text'>Health Remaining</h1>
           <h1 className='hp-text' style={{
             "fontSize" : "50px"
-          }}>5/5</h1>
-          <img className='health-bar' src={HealthBar[5]} alt='HP-5'/>
+          }}>{health}/5</h1>
+          <img className='health-bar' src={HealthBar[health]} alt='HP-5'/>
         </div>
       </div>
       <div className="timer-count-box">
@@ -45,11 +54,11 @@ const Timer = () => {
           <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
         </div>
       </div>
-      <div className="timer-btn-div">
+      {/* <div className="timer-btn-div">
         <button className='timer-btn' onClick={() => setRunning(true)}>START</button>
         <button className='timer-btn' onClick={() => setRunning(false)}>STOP</button>
         <button className='timer-btn' onClick={() => {setRunning(false);setTime(0)}}>RESET</button>       
-      </div>
+      </div> */}
     </div>
   )
 }
