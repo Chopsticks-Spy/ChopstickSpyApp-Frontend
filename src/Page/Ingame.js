@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Timer from '../Components/Timer'
-import { patchStatus, patchStatusAttr } from '../service/Status'
+import { getStatus, patchStatus, patchStatusAttr } from '../service/Status'
 
 const Ingame = () => {
   
-  patchStatusAttr("isActive",true)
-  
+  const [data, setData] = useState({})
+
+  useEffect(() => {
+    setData(getStatus())
+  }, [])
+
+  console.log(data);
+
   return (
     <div>
       <div className="time-box">

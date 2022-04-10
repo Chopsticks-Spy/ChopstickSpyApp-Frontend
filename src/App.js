@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import CountDownPage from './Page/CountDownPage';
 import Home from './Page/Home';
 import Ingame from './Page/Ingame';
 import Scoreboard from './Page/Scoreboard';
@@ -15,6 +16,7 @@ function App() {
            <Route path="/" element={<Home/>}/>
            <Route path="/ingame" element={<Ingame/>}/>
            <Route path="/scoreboard" element={<Scoreboard/>}/>
+           <Route path="/wait" element={<CountDownPage/>}/>
          </Routes> 
          </div>
       </div>
