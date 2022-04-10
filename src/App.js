@@ -4,7 +4,6 @@ import Home from './Page/Home';
 import Ingame from './Page/Ingame';
 import Scoreboard from './Page/Scoreboard';
 
-
 function App() {
   return (
       <div>

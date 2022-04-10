@@ -10,7 +10,7 @@ import hp5 from '../image/HPbar/hp5.png'
 const Timer = () => {
   
   const [time, setTime] = useState(0);
-  const [running, setRunning] = useState(false);
+  const [running, setRunning] = useState(true);
   const HealthBar = [hp0,hp1,hp2,hp3,hp4,hp5]
 
   useEffect(() => {

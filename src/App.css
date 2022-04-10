@@ -28,7 +28,7 @@ body {
 }
 
 
-.startbtn:hover {
+.startbtn:hover, .scorebtn:hover {
   box-shadow: 0 0px 25px 0 rgb(255, 206, 206);
 }
 
@@ -39,6 +39,34 @@ body {
   position: center;
   background: #FF0000;
   font-size: 50px;
+  border: 4px solid;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 36%;
+  text-decoration: none;
+}
+
+.scorebtn {
+  color: rgb(255, 255, 255);
+  padding: 20px 80px;
+  height: 700px;
+  position: center;
+  background: #539706;
+  font-size: 50px;
+  border: 4px solid;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 36%;
+  text-decoration: none;
+}
+
+.homebtn {
+  color: rgb(255, 255, 255);
+  padding: 5px 40px;
+  /* height: 0px; */
+  position: center;
+  background: #26b306;
+  font-size: 30px;
   border: 4px solid;
   cursor: pointer;
   border-radius: 10px;
