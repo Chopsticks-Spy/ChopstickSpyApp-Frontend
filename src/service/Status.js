@@ -23,3 +23,9 @@ async function patchStatusAttr(attribute,value){
     const resp = await axios.patch(IP,data)
     return resp
 }
+
+module.exports = {
+    getStatus,
+    patchStatus,
+    patchStatusAttr
+}
