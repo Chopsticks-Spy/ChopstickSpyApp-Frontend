@@ -22,7 +22,10 @@ const Timer = () => {
     <div id='game-stat-box'>
       <div className='box-top'>
         <h1 className='timer-text'>Timer</h1>
-        <h1 className='hp-text'>HP</h1>
+        <div className='hp'>
+          <h1 className='hp-text'>HP</h1>
+          <img src='./src/image/HPbar/hp5.png' alt='HP-5'/>
+        </div>
       </div>
       <div className="timer-count-box">
         <div className="numbers">
