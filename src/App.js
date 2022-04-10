@@ -3,7 +3,9 @@ import './App.css';
 import CountDownPage from './Page/CountDownPage';
 import Home from './Page/Home';
 import Ingame from './Page/Ingame';
+import Lose from './Page/Lose';
 import Scoreboard from './Page/Scoreboard';
+import Win from './Page/Win';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
            <Route path="/ingame" element={<Ingame/>}/>
            <Route path="/scoreboard" element={<Scoreboard/>}/>
            <Route path="/wait" element={<CountDownPage/>}/>
+           <Route path="/win" element={<Win/>}/>
+           <Route path="/lose" element={<Lose/>}/>
          </Routes> 
          </div>
       </div>
