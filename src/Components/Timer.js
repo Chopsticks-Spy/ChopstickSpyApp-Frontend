@@ -31,7 +31,7 @@ const Timer = () => {
   useEffect(()=>{
     getStatus().then((data)=>{
       setHealth(data.hp)
-      console.log(data.hp)
+      // console.log(data.hp)
     })
   })
   

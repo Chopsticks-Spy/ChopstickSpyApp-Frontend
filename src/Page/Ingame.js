@@ -7,18 +7,20 @@ const Ingame = () => {
   const [status, setStatus] = useState(0)
 
   useEffect(() => {
-    getStatus().then((resp) => {
-      if (resp.isActive === false) {
-        if (resp.isWin === 1) {
-          setStatus(1)
-        } else if (resp.isWin === -1) {
-          setStatus(-1)
+    setInterval(()=>{
+      getStatus().then((resp) => {
+        console.log(resp.isActive,resp.isWin)
+        if (resp.isActive === false) {
+          if (resp.isWin === 1) {
+            setStatus(1)
+          } else if (resp.isWin === -1) {
+            setStatus(-1)
+          }
         }
-      }
-    })
-  }, [])
-
-  // console.log(data);
+      })
+    },200)
+   
+  },[])
 
   return (
     <div>
