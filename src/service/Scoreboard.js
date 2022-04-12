@@ -1,5 +1,5 @@
 const axios = require('axios')
-const IP = "http://192.168.43.210:8000/scoreboard"
+const IP = "http://localhost:8000/scoreboard"
 
 async function getScore(){
     const response = await axios.get(IP)

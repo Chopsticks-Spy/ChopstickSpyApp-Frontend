@@ -1,5 +1,5 @@
 const axios = require('axios')
-const IP = "http://192.168.43.210:8000/status"
+const IP = "http://localhost:8000/status"
 
 async function getStatus(){
     const resp = await axios.get(IP)

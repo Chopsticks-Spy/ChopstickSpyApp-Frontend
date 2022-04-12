@@ -17,7 +17,7 @@ const CountDownPage = () => {
     <div className='countdown-main' style={{"color":"white"}}>
       <h1 className='begin-text'>Game Begin in</h1>
       <h1 className='count-num'>{count}</h1>
-      {count === 0 && <meta http-equiv = "refresh" content = "0; url = http://192.168.43.80:3000/Ingame" />}
+      {count === 0 && <meta http-equiv = "refresh" content = "0; url = http://localhost:3000/Ingame" />}
     </div>
   )
 }

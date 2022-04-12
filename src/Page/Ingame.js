@@ -26,8 +26,8 @@ const Ingame = () => {
     <div>
       <div className="time-box">
         <Timer/>
-        {status === 1 && <meta http-equiv = "refresh" content = "0; url = http://192.168.43.80:3000/win" />}
-        {status === -1 && <meta http-equiv = "refresh" content = "0; url = http://192.168.43.80:3000/lose" />}
+        {status === 1 && <meta http-equiv = "refresh" content = "0; url = http://localhost:3000/win" />}
+        {status === -1 && <meta http-equiv = "refresh" content = "0; url = http://localhost:3000/lose" />}
       </div>
     </div>
   )
