@@ -16,7 +16,8 @@ const PlayerScore = (props) => {
             "textShadow": Number(props.ranking) <= 3 ? `0px 0px 20px ${ranking_color}` : "0px 0px 0px white"
         }}>{props.ranking}</p>
         <p className='score-card-name'>{props.name}</p>
-        <p className='score-card-score'>{props.score}</p>
+        <p className='score-card-hp'>{props.hp}</p>
+        <p className='score-card-time'>{props.time}</p>
     </div>
   )
 }

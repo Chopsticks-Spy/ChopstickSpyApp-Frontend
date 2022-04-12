@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import hp0 from '../image/HPbar/hp0.png'
+import hp1 from '../image/HPbar/hp1.png'
+import hp2 from '../image/HPbar/hp2.png'
+import hp3 from '../image/HPbar/hp3.png'
+import hp4 from '../image/HPbar/hp4.png'
+import hp5 from '../image/HPbar/hp5.png'
+import { getStatus } from '../service/Status'
+
 
 const Timer = () => {
   
   const [time, setTime] = useState(0);
-  const [running, setRunning] = useState(false);
+  const [running, setRunning] = useState(true);
+  const [health,setHealth] = useState(5)
+  const HealthBar = [hp0,hp1,hp2,hp3,hp4,hp5]
 
   useEffect(() => {
     let interval;
@@ -17,12 +27,25 @@ const Timer = () => {
     return () => clearInterval(interval);
     }
   , [running]);
+
+  useEffect(()=>{
+    getStatus().then((data)=>{
+      setHealth(data.hp)
+      // console.log(data.hp)
+    })
+  })
   
   return (
     <div id='game-stat-box'>
       <div className='box-top'>
-        <h1 className='timer-text'>Timer</h1>
-        <h1 className='hp-text'>HP</h1>
+        {/* <h1 className='timer-text'>Timer</h1> */}
+        <div className='hp'>
+          <h1 className='hp-text'>Health Remaining</h1>
+          <h1 className='hp-text' style={{
+            "fontSize" : "50px"
+          }}>{health}/5</h1>
+          <img className='health-bar' src={HealthBar[health]} alt='HP-5'/>
+        </div>
       </div>
       <div className="timer-count-box">
         <div className="numbers">
@@ -31,11 +54,11 @@ const Timer = () => {
           <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
         </div>
       </div>
-      <div className="timer-btn-div">
+      {/* <div className="timer-btn-div">
         <button className='timer-btn' onClick={() => setRunning(true)}>START</button>
         <button className='timer-btn' onClick={() => setRunning(false)}>STOP</button>
         <button className='timer-btn' onClick={() => {setRunning(false);setTime(0)}}>RESET</button>       
-      </div>
+      </div> */}
     </div>
   )
 }
